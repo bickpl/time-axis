@@ -16,6 +16,7 @@
         <!--@mbg.generated-->
         id, `name`, teacher, major, `time`, `owner`
     </sql>
+<!-- 通过主键查找事件 -->
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         <!--@mbg.generated-->
         select
@@ -23,12 +24,14 @@
         from t_event
         where id = #{id}
     </select>
+<!-- 通过逐渐删除事件 -->
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
         <!--@mbg.generated-->
         delete
         from t_event
         where id = #{id}
     </delete>
+<!-- 插入事件 -->
     <insert id="insert" keyColumn="id" keyProperty="id" parameterType="site.fsyj.timeaxis.entity.Event"
             useGeneratedKeys="true">
         <!--@mbg.generated-->
@@ -74,6 +77,7 @@
             </if>
         </trim>
     </insert>
+<!-- 通过事件id更新时间 -->
     <update id="updateByPrimaryKeySelective" parameterType="site.fsyj.timeaxis.entity.Event">
         <!--@mbg.generated-->
         update t_event
