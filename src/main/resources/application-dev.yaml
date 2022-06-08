@@ -5,7 +5,9 @@ spring:
   datasource:
     username: root
     password: root
+#     这里填入mysql的，其中time是数据库名
     url: jdbc:mysql://localhost:3306/time?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+#     连接驱动名
     driver-class-name: com.mysql.cj.jdbc.Driver
   mvc:
     pathmatch:
